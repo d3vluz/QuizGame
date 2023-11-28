@@ -8,15 +8,32 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "BDQuiz",
+"language": "GDScript",
+"path": "res://assets/resource/bd_quiz.gd"
+}, {
+"base": "Resource",
+"class": "QuizQuestion",
+"language": "GDScript",
+"path": "res://assets/resource/res_question.gd"
+} ]
+_global_script_class_icons={
+"BDQuiz": "",
+"QuizQuestion": ""
+}
+
 [application]
 
 config/name="Game_Quiz_Final"
+run/main_scene="res://assets/scenes/Main.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=480
-window/size/height=720
+window/size/width=720
+window/size/height=480
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

@@ -1,4 +1,10 @@
-extends Node2D
+extends Control
 
 func _ready():
-	pass # Replace with function body.
+	$VBoxContainer/startBtn.grab_focus()
+
+func _on_startBtn_pressed():
+	get_tree().change_scene("res://assets/scenes/Jogo.tscn")
+
+func _on_exitBtn_pressed():
+	get_tree().quit()

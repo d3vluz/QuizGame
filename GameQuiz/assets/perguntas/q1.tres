@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://assets/resource/res_question.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+quesiton_info = "Como se chama \"Camisa\" em inglês?"
+type = 0
+options = [ "Cap", "Pants", "T-Shirt", "Sandals" ]
+correct = "T-Shirt"
