@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets_sprites/background.png" type="Texture" id=1]
+[ext_resource path="res://scripts/level/Commands.gd" type="Script" id=2]
+[ext_resource path="res://assets_sprites/take_n_quit.png" type="Texture" id=3]
+[ext_resource path="res://assets_audio/menu_buttonc_click.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets_sprites/take_n_quit_pressed.png" type="Texture" id=5]
+[ext_resource path="res://GROBOLD.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets_sprites/lifelines_aud_normal.png" type="Texture" id=7]
+[ext_resource path="res://assets_sprites/lifelines_expert_normal.png" type="Texture" id=8]
+[ext_resource path="res://assets_sprites/lifelines_x2_normal.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+font_data = ExtResource( 6 )
+
+[node name="Commands" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="background" type="Sprite" parent="."]
+scale = Vector2( 0.703125, 0.843585 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="return_button" type="TextureButton" parent="."]
+margin_left = 670.0
+margin_top = 5.0
+margin_right = 746.0
+margin_bottom = 77.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+
+[node name="button_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="informe_jogo" type="Label" parent="."]
+margin_left = 38.0
+margin_top = 64.0
+margin_right = 677.0
+margin_bottom = 456.0
+custom_fonts/font = SubResource( 1 )
+text = "   ''Quiz Fun Game'' é um jogo de perguntas e repostas. feito a partir de uma releitura de programa de televisao ''Quem quer ser um milionario?'' portanto as regras sãao simples.
+
+   É feito uma pergunta no começo de cada rodada, essa pergunta tera apenas uma resposta verdadeira e as demais falsas, cabe ao participante descobrir a verdadeira para continuar a jogar e alcançar o maior dos prêmios. Ao todo sao 15 perguntas para chegar ao prêmio final
+
+   Para auxiliar o participante na sua trajetóoria, foi adicionado 3 dicas que poderao ser utilizadas x1 (uma vez) por jogo, portante use-as com sabedoria!!
+
+
+
+   Funcionamento das dicas:
+
+                        ''Half Answers'' = retira aleatoriamente 2 respostas ERRADAS
+
+                         'University Help' = um universitario lhe diráa a resposta que ele acha verdadeira
+						                                                        a resposta do universitáario é sempre certa
+
+                         'Audience Help' = a plateia vai dizer a resposta que acha verdadeira, tem 25% 
+						                                                        de ser um resposta errada "
+autowrap = true
+
+[node name="hint1" type="Sprite" parent="."]
+position = Vector2( 95, 325 )
+scale = Vector2( 0.5, 0.6 )
+texture = ExtResource( 9 )
+
+[node name="hint2" type="Sprite" parent="."]
+position = Vector2( 95, 370 )
+scale = Vector2( 0.5, 0.6 )
+texture = ExtResource( 8 )
+
+[node name="hint3" type="Sprite" parent="."]
+position = Vector2( 95, 415 )
+scale = Vector2( 0.5, 0.6 )
+texture = ExtResource( 7 )
+
+[connection signal="pressed" from="return_button" to="." method="_on_return_button_pressed"]

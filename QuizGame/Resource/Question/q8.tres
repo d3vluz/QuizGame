@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/resources/res_question.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Quantas horas de sono, em média, sao recomendadas para crianças de 7 a 12 anos?"
+type = 0
+options = [ "3 horas", "8 horas", "15 horas", "1 hora" ]
+correct = "8 horas"

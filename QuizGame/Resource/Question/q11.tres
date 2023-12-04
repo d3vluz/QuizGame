@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-question_info = "I ---- Vitor Kley. (to like)"
+question_info = "Translate the phrase 'Bom dia' into English."
 type = 0
-options = [ "Like", "Likes", "Doesn't like", "Doesn't likes" ]
-correct = "Like"
+options = [ "Good night", "Good afternoon", "Good morning", "Goodbye" ]
+correct = "Good morning"

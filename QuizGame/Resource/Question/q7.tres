@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/resources/res_question.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Complete the sentence: 'I ------ a good book yesterday.'"
+type = 0
+options = [ "Read", "Reading", "Readed", "Rided" ]
+correct = "Read"
